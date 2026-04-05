@@ -63,7 +63,22 @@ python goblin.py hedef_dosya.bin -m 6
 --- Hassas Veri (PASSWORD) BULUNDU! ---
  -> SuperSecretAdmin123!
 
- ## 📸 Ekran Görüntüleri ile Adım Adım Çalışma Kanıtı
+## 📸 Örnek Kullanım Görüntüsü
+
+Burada, `goblin.py` scriptinin bir zararlı yazılım binary dosyası olan `hedef_dosya.bin` üzerinde analiz yapmasının ve ayıklanan C2 sunucu bilgilerini veCredentials (kimlik bilgilerini) göstermesinin bir ekran görüntüsü yer almaktadır:
+
+![Goblin Toolbox Analiz Sonuçları Ekran Görüntüsü](screenshots/ss1.png)
+
+## Ayıklanan Veri Özeti
+
+Yukarıdaki ekran görüntüsünde görüldüğü gibi, araç aşağıdaki hassas verileri başarıyla tespit etmiş ve ayıklamıştır:
+
+| Hassas Veri Türü | Ayıklanan Veri Değeri |
+| :--- | :--- |
+| **C2 Sunucu URL'si** | `https://malicious-c2-server.com/payload.exe` |
+| **C2 IP Adresi** | `192.168.1.105` |
+| **API Anahtarı** | `AKIAIOSFODNN7EXAMPLE` |
+| **Parola** | `SuperSecretAdmin123` |
 
 ## 👤 Hazırlayan
 
