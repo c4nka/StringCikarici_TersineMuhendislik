@@ -17,7 +17,7 @@ Goblin Toolbox, derlenmiş binary (ikili) dosyaların veya zararlı yazılımlar
 ## 📁 Proje Yapısı
 
 ```text
-Goblin-String-Extractor/
+StringCikarici_TersineMuhendislik/
 │
 ├── screenshots/
 │   └── ss1.png   # Projenin çalıştığını gösteren terminal çıktısı
@@ -32,12 +32,12 @@ Bu araç tamamen standart Python kütüphaneleri kullanılarak yazılmıştır. 
 
 1. Repoyu bilgisayarınıza klonlayın:
    ```bash
-   git clone [https://github.com/KULLANICI_ADIN/Goblin-String-Extractor.git](https://github.com/KULLANICI_ADIN/Goblin-String-Extractor.git)
+   git clone [https://github.com/c4nka/StringCikarici_TersineMuhendislik.git](https://github.com/c4nka/StringCikarici_TersineMuhendislik.git)
 
 2. Proje dizinine gidin:
 
 Bash
-cd Goblin-String-Extractor
+cd StringCikarici_TersineMuhendislik
 
 💻 Kullanım
 Aracı komut satırı (CLI) üzerinden çalıştırabilirsiniz. Hedef dosyanın yolunu parametre olarak vermeniz yeterlidir.
