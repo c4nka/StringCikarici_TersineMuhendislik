@@ -36,9 +36,9 @@ Bu araç tamamen standart Python kütüphaneleri kullanılarak yazılmıştır. 
 
 2. Proje dizinine gidin:
 
-Bash
+```bash
 cd StringCikarici_TersineMuhendislik
-
+```
 💻 Kullanım
 Aracı komut satırı (CLI) üzerinden çalıştırabilirsiniz. Hedef dosyanın yolunu parametre olarak vermeniz yeterlidir.
 
