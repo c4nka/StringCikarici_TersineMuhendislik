@@ -63,4 +63,13 @@ python goblin.py hedef_dosya.bin -m 6
 --- Hassas Veri (PASSWORD) BULUNDU! ---
  -> SuperSecretAdmin123!
 
+ ## 📸 Ekran Görüntüleri ile Adım Adım Çalışma Kanıtı
+
+## 👤 Hazırlayan
+
+- **Ad Soyad:** Raşit ÇANKAYA
+- **Öğrenci No:** 2420191006
+- **Üniversite:** İstinye Üniversitesi
+- **Bölüm:** Bilişim Güvenliği Teknolojisi (İÖ)
+
  Bu araç Tersine Mühendislik dersi kapsamında ve tamamen eğitim/araştırma amaçlı geliştirilmiştir. Yalnızca yasal yetkiniz olan dosyalar üzerinde analiz yapınız.
