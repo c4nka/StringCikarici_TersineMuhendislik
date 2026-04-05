@@ -14,6 +14,18 @@ Goblin Toolbox, derlenmiş binary (ikili) dosyaların veya zararlı yazılımlar
   - API Anahtarları (API Keys / Tokens)
   - Parolalar (Passwords)
 
+## 📁 Proje Yapısı
+
+```text
+Goblin-String-Extractor/
+│
+├── screenshots/
+│   └── ss1.png   # Projenin çalıştığını gösteren terminal çıktısı
+│
+├── goblin.py                      # Aracın ana kaynak kodu (Python betiği)
+├── hedef_dosya.bin                # Analiz edilen örnek/test binary dosyası
+└── README.md                      # Proje dökümantasyonu
+```
 ## 🛠️ Kurulum
 
 Bu araç tamamen standart Python kütüphaneleri kullanılarak yazılmıştır. Herhangi bir harici modül (pip install) gerektirmez.
