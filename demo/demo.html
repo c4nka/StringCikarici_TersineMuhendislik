@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Courier New', monospace;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            overflow: hidden;
+        }
+        #terminal {
+            white-space: pre-wrap;
+        }
+        .prompt { color: #4af626; }
+        .path { color: #3b8eea; }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: #d4d4d4;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .highlight { color: #f5f543; }
+        .success { color: #4af626; }
+        .alert { color: #f64a4a; }
+        .c2 { color: #e67e22; }
+    </style>
+</head>
+<body>
+    <div id="terminal"></div>
+    <div id="cursor" class="cursor"></div>
+
+    <script>
+        const terminal = document.getElementById('terminal');
+        const lines = [
+            { type: 'input', text: 'ls -la', delay: 2000 },
+            { type: 'output', text: 'total 56\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:56 .\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:40 ..\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:41 .git\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:41 .github\n-rw-r--r-- 1 user 197121   13 Apr  6 19:41 .gitattributes\n-rw-r--r-- 1 user 197121 4895 Apr  6 19:41 .gitignore\n-rw-r--r-- 1 user 197121  471 Apr  6 19:41 Dockerfile\n-rw-r--r-- 1 user 197121 1093 Apr  6 19:41 LICENSE\n-rw-r--r-- 1 user 197121 4989 Apr  6 19:41 README.md\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:41 docs\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:41 gitea_repo_analiz\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:41 screenshots\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:41 src\ndrwxr-xr-x 1 user 197121    0 Apr  6 19:56 tests', delay: 10000 },
+            
+            { type: 'input', text: 'python src/goblin.py --help', delay: 5000 },
+            { type: 'output', html: '<span class="alert">=======================================</span>\n    <span class="highlight">GOBLIN TOOLBOX - String Extractor</span>  \n<span class="alert">=======================================</span>\nusage: goblin.py [-h] [-m MIN] file\n\nBinary dosyalardan string çıkarıp hassas veri arayan analiz aracı.\n\npositional arguments:\n  file           Analiz edilecek hedefin dosya yolu (örn: malware.exe)\n\noptions:\n  -h, --help     show this help message and exit\n  -m, --min MIN  Minimum string uzunluğu (varsayılan: 4)', delay: 15000 },
+
+            { type: 'input', text: 'python src/goblin.py missing_file.bin', delay: 5000 },
+            { type: 'output', html: '<span class="alert">=======================================</span>\n    <span class="highlight">GOBLIN TOOLBOX - String Extractor</span>  \n<span class="alert">=======================================</span>\n<span class="success">[*]</span> Hedef Dosya: missing_file.bin\n<span class="success">[*]</span> Bayt bayt tarama yapılıyor... (Minimum 4 karakter)\n<span class="alert">[-] Hata: missing_file.bin bulunamadı!</span>\n<span class="alert">[-] Analiz edilecek geçerli bir veri bulunamadı.</span>', delay: 15000 },
+
+            { type: 'input', text: 'python src/goblin.py src/hedef_dosya.bin', delay: 5000 },
+            { type: 'output', html: '<span class="alert">=======================================</span>\n    <span class="highlight">GOBLIN TOOLBOX - String Extractor</span>  \n<span class="alert">=======================================</span>\n<span class="success">[*]</span> Hedef Dosya: src/hedef_dosya.bin\n<span class="success">[*]</span> Bayt bayt tarama yapılıyor... (Minimum 4 karakter)' },
+            { type: 'output', text: '[?] Analiz Modülü Yükleniyor ...', delay: 10000 },
+            { type: 'output', text: '[?] 15% tamamlandı...', delay: 10000 },
+            { type: 'output', text: '[?] 45% tamamlandı...', delay: 15000 },
+            { type: 'output', text: '[?] 80% tamamlandı...', delay: 15000 },
+            { type: 'output', text: '[+] Toplam 1 adet potansiyel string bulundu.\n', delay: 5000 },
+            { type: 'output', text: '[+] Regex Analizi Başlıyor...\n', delay: 5000 },
+            { type: 'output', html: '<span class="c2">--- C2 Sunucu URL\'si BULUNDU! ---</span>\n -> <span class="highlight">https://malicious-c2-server.com/payload.exe</span>\n', delay: 15000 },
+            { type: 'output', html: '<span class="c2">--- C2 IP Adresi BULUNDU! ---</span>\n -> <span class="highlight">192.168.1.105</span>\n', delay: 15000 },
+            { type: 'output', html: '<span class="c2">--- Hassas Veri (API KEY) BULUNDU! ---</span>\n -> <span class="highlight">AKIAIOSFODNN7EXAMPLE</span>\n', delay: 15000 },
+            { type: 'output', html: '<span class="c2">--- Hassas Veri (PASSWORD) BULUNDU! ---</span>\n -> <span class="highlight">SuperSecretAdmin123</span>\n', delay: 15000 },
+
+            { type: 'input', text: 'pytest tests/', delay: 5000 },
+            { type: 'output', text: '============================= test session starts =============================\nplatform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0\nrootdir: C:\\StringCikarici_TersineMuhendislik\ncollected 2 items\n\ntests\\test_goblin.py ..                                                  [100%]\n\n<span class="success">============================== 2 passed in 0.02s ==============================</span>', delay: 15000 },
+
+            { type: 'input', text: '' }
+        ];
+
+        let typingSpeed = 50;
+        
+        async function run() {
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+                if (line.delay && line.type === 'input') {
+                    await simulateThinking(line.delay);
+                }
+
+                if (line.type === 'input') {
+                    await typeCommand(line.text);
+                    await new Promise(r => setTimeout(r, 500));
+                } else if (line.type === 'output') {
+                    if (line.html) {
+                        appendHtml(line.html + '\n');
+                    } else if (line.text) {
+                        appendText(line.text + '\n');
+                    }
+                    if(line.delay) {
+                        await simulateThinking(line.delay);
+                    }
+                }
+            }
+            appendText("\n[Done] - Demo Complete.");
+            document.title = "Done";
+        }
+
+        async function typeCommand(text) {
+            const prompt = '<span class="prompt">user@host</span>:<span class="path">~/StringCikarici_TersineMuhendislik</span>$ ';
+            terminal.innerHTML += prompt;
+            for (let i = 0; i < text.length; i++) {
+                terminal.innerHTML += text[i];
+                window.scrollTo(0, document.body.scrollHeight);
+                await new Promise(r => setTimeout(r, typingSpeed + Math.random() * 50));
+            }
+            terminal.innerHTML += '\n';
+        }
+
+        function appendText(text) {
+            terminal.innerHTML += text;
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function appendHtml(html) {
+            terminal.innerHTML += html;
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        async function simulateThinking(ms) {
+            let chunks = ms / 1000;
+            for(let i=0; i<chunks; i++) {
+                await new Promise(r => setTimeout(r, 1000));
+            }
+        }
+
+        run();
+    </script>
+</body>
+</html>
