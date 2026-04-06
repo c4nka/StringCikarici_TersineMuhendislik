@@ -42,9 +42,9 @@ StringCikarici_TersineMuhendislik/
 │
 ├── screenshots/
 │   └── goblin_analiz_sonucu.png   # Projenin çalıştığını gösteren terminal çıktısı
-│
-├── goblin.py                      # Aracın ana kaynak kodu (Python betiği)
-├── hedef_dosya.bin                # Analiz edilen örnek/test binary dosyası
+├── src/
+    └── goblin.py                      # Aracın ana kaynak kodu (Python betiği)
+    └── hedef_dosya.bin                # Analiz edilen örnek/test binary dosyası
 └── README.md                      # Proje dökümantasyonu
 ```
 
