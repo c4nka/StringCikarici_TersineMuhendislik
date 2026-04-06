@@ -95,7 +95,7 @@ python src/goblin.py hedef_dosya.bin
 
 Aşağıdaki ekran kaydında projenin kurulum, kullanım, hata yakalama (invalid input), temel analiz süreci ve entegre test süreçlerinin adım adım nasıl çalıştığını görebilirsiniz:
 
-![Project Demo](./demo/demo.mp4)
+![Project Demo](./demo/demo.html)
 
 ## 📊 Projenin Çalıştığına Dair Görsel Kanıt
 
