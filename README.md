@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/tr/archive/3/36/20200813164817%21Istinye_University_Logo.png" alt="İstinye Üniversitesi Logosu" width="200"/>
-</p>
+<div align="center">
+  <img src="https://images.seeklogo.com/logo-png/61/1/istinye-universitesi-logo-png_seeklogo-610039.png" width="300" alt="İstinye Üniversitesi Logosu">
+</div>
 
 # 🧝‍♂️ Goblin Toolbox - String Extractor
 
@@ -9,9 +9,10 @@
 ![Build](https://img.shields.io/badge/Status-Active-success.svg)
 ![Topic](https://img.shields.io/badge/Topic-Reverse%20Engineering-orange.svg)
 
+**Öğrenci:** Raşit ÇANKAYA (2420191006)
+**Üniversite / Bölüm:** İstinye Üniversitesi - Bilişim Güvenliği Teknolojisi (İÖ)  
 **Ders:** Tersine Mühendislik (Reverse Engineering)
-**Danışman:** [Danışman Hocanın Adı ve Soyadı Buraya]
-**Geliştiren:** Raşit Çankaya
+**Danışman:** Keyvan Arasteh Abbasabad
 
 ---
 
@@ -47,7 +48,7 @@ StringCikarici_TersineMuhendislik/
 └── README.md                      # Proje dökümantasyonu
 ```
 
-🚀 Özellikler
+## 🚀 Özellikler
 Bayt-Bayt Analiz: Dosya formatından bağımsız olarak ham veriyi okur ve İngilizce/ASCII karakter dizilerini cımbızla çeker.
 
 Esnek Regex Mimarisi: Geliştirilmiş regex kuralları sayesinde hem ayrık hem de bitişik (obfuscate edilmiş) metinleri tespit edebilir.
@@ -62,5 +63,53 @@ API Anahtarları (API Keys / Tokens)
 
 Parolalar (Passwords)
 
-🛠️ Kurulum
+## 🛠️ Kurulum
+
 Bu araç tamamen standart Python kütüphaneleri kullanılarak yazılmıştır. Herhangi bir harici modül (pip install) gerektirmez.
+
+Repoyu bilgisayarınıza klonlayın:
+
+```bash
+git clone [https://github.com/c4nka/StringCikarici_TersineMuhendislik.git](https://github.com/c4nka/StringCikarici_TersineMuhendislik.git)
+```
+
+Proje dizinine gidin:
+
+```bash
+cd StringCikarici_TersineMuhendislik
+```
+
+## 💻 Kullanım
+
+Aracı komut satırı (CLI) üzerinden çalıştırabilirsiniz. Hedef dosyanın yolunu parametre olarak vermeniz yeterlidir.
+
+Örnek Çalıştırma Komutu:
+
+```bash
+python goblin.py hedef_dosya.bin
+```
+
+## 📊 Projenin Çalıştığına Dair Görsel Kanıt
+
+Bu görsel, aracın `hedef_dosya.bin` üzerinde yaptığı analizin gerçek terminal çıktısını göstermektedir. Geliştirilen esnek regex kuralları sayesinde, veriler harf arasına sıkışmış olsa dahi (IP adresi ve temiz URL) cımbızla çekilerek başarıyla tespit edilmiştir.
+
+![Proje Çıktısı](./screenshots/ss1.png)
+
+## Ayıklanan Veri Özeti
+
+Yukarıdaki ekran görüntüsünde görüldüğü gibi, araç aşağıdaki hassas verileri başarıyla tespit etmiş ve ayıklamıştır:
+
+| Hassas Veri Türü | Ayıklanan Veri Değeri |
+| :--- | :--- |
+| **C2 Sunucu URL'si** | `https://malicious-c2-server.com/payload.exe` |
+| **C2 IP Adresi** | `192.168.1.105` |
+| **API Anahtarı** | `AKIAIOSFODNN7EXAMPLE` |
+| **Parola** | `SuperSecretAdmin123` |
+
+## 📜 Lisans
+
+Bu proje [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır. 
+
+## ⚠️ Yasal Uyarı
+
+Bu araç **Tersine Mühendislik** dersi kapsamında ve tamamen **eğitim/araştırma amaçlı** geliştirilmiştir. Yalnızca yasal yetkiniz olan dosyalar üzerinde analiz yapınız.
