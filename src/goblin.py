@@ -1,3 +1,6 @@
+# TODO: İleriki sürümlerde Base64 şifreleme çözücü (deobfuscation) yeteneği eklenecek.
+# TODO: Çıktıları terminal yerine otomatik olarak rapor.json dosyasına aktarma parametresi eklenecek.
+
 import os
 import re
 import string
