@@ -9,9 +9,9 @@
 ![Build](https://img.shields.io/badge/Status-Active-success.svg)
 ![Topic](https://img.shields.io/badge/Topic-Reverse%20Engineering-orange.svg)
 
-**Öğrenci:** Raşit ÇANKAYA (2420191006)
+**Öğrenci:** Raşit ÇANKAYA (2420191006)  
 **Üniversite / Bölüm:** İstinye Üniversitesi - Bilişim Güvenliği Teknolojisi (İÖ)  
-**Ders:** Tersine Mühendislik (Reverse Engineering)
+**Ders:** Tersine Mühendislik (Reverse Engineering)  
 **Danışman:** Keyvan Arasteh Abbasabad
 
 ---
