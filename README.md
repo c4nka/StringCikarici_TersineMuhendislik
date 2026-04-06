@@ -86,7 +86,7 @@ Aracı komut satırı (CLI) üzerinden çalıştırabilirsiniz. Hedef dosyanın 
 Örnek Çalıştırma Komutu:
 
 ```bash
-python goblin.py hedef_dosya.bin
+python src/goblin.py hedef_dosya.bin
 ```
 
 ## 📊 Projenin Çalıştığına Dair Görsel Kanıt
