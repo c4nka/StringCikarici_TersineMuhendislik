@@ -91,6 +91,12 @@ Aracı komut satırı (CLI) üzerinden çalıştırabilirsiniz. Hedef dosyanın 
 python src/goblin.py hedef_dosya.bin
 ```
 
+## 🎬 Demo
+
+Aşağıdaki ekran kaydında projenin kurulum, kullanım, hata yakalama (invalid input), temel analiz süreci ve entegre test süreçlerinin adım adım nasıl çalıştığını görebilirsiniz:
+
+![Project Demo](./demo/demo.mp4)
+
 ## 📊 Projenin Çalıştığına Dair Görsel Kanıt
 
 Bu görsel, aracın `hedef_dosya.bin` üzerinde yaptığı analizin gerçek terminal çıktısını göstermektedir. Geliştirilen esnek regex kuralları sayesinde, veriler harf arasına sıkışmış olsa dahi (IP adresi ve temiz URL) cımbızla çekilerek başarıyla tespit edilmiştir.
