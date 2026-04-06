@@ -23,6 +23,9 @@
 - [Kurulum](#️-kurulum)
 - [Kullanım](#-kullanım)
 - [Çalışma Kanıtı](#-projenin-çalıştığına-dair-görsel-kanıt)
+- [Ayıklanan Veri Özeti](#-ayiklanan-veri-ozeti)
+- [Lisans](#-lisans)
+- [Yasal Uyarı](#-yasal-uyari)
 
 ---
 
