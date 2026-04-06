@@ -1,0 +1,28 @@
+name: Goblin Toolbox CI/CD
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Repoyu Klonla (Checkout)
+      uses: actions/checkout@v3
+
+    - name: Python 3.10 Kurulumu
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+
+    - name: Kod Sözdizimi Kontrolü (Syntax Check)
+      run: |
+        python -m py_compile src/goblin.py
+
+    - name: Kuru Çalıştırma Testi (Dry Run)
+      run: |
+        python src/goblin.py -h
