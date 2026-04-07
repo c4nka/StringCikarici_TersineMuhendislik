@@ -99,7 +99,7 @@ Aşağıdaki ekran kaydında projenin kurulum, kullanım, hata yakalama (invalid
 <br>
 <a href="https://youtu.be/X5OuelGrnPk" target="_blank">Youtube Demo Videosunu İzlemek İçin Tıklayın</a>
 
-<video src="docs/demo.mp4" width="100%" controls>
+<video src="docs/demo.ts" width="100%" controls>
 </video>
 
 <video src="docs/demo.mp4" width="100%" autoplay loop muted playsinline>
