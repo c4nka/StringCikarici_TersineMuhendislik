@@ -97,7 +97,10 @@ Aşağıdaki ekran kaydında projenin kurulum, kullanım, hata yakalama (invalid
 
 [Demo](./demo/demo.html)
 <br>
-<a href="https://youtu.be/X5OuelGrnPk" target="_blank">Demo Videosunu İzlemek İçin Tıklayın</a>
+<a href="https://youtu.be/X5OuelGrnPk" target="_blank">Youtube Demo Videosunu İzlemek İçin Tıklayın</a>
+
+<video src="docs/demo.mp4" width="100%" controls>
+</video>
 
 ## 📊 Projenin Çalıştığına Dair Görsel Kanıt
 
