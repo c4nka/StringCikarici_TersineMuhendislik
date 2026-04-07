@@ -101,9 +101,6 @@ Aşağıdaki ekran kaydında projenin kurulum, kullanım, hata yakalama (invalid
 <br>
 <a href="https://youtu.be/X5OuelGrnPk" target="_blank">Youtube Demo Videosunu İzlemek İçin Tıklayın</a>
 
-<video src="demo/demo.H264" width="100%" controls>
-</video>
-
 ## 📊 Projenin Çalıştığına Dair Görsel Kanıt
 
 Bu görsel, aracın `hedef_dosya.bin` üzerinde yaptığı analizin gerçek terminal çıktısını göstermektedir. Geliştirilen esnek regex kuralları sayesinde, veriler harf arasına sıkışmış olsa dahi (IP adresi ve temiz URL) cımbızla çekilerek başarıyla tespit edilmiştir.
