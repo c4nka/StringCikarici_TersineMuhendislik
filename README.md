@@ -102,6 +102,9 @@ Aşağıdaki ekran kaydında projenin kurulum, kullanım, hata yakalama (invalid
 <video src="docs/demo.mp4" width="100%" controls>
 </video>
 
+<video src="docs/demo.mp4" width="100%" autoplay loop muted playsinline>
+</video>
+
 ## 📊 Projenin Çalıştığına Dair Görsel Kanıt
 
 Bu görsel, aracın `hedef_dosya.bin` üzerinde yaptığı analizin gerçek terminal çıktısını göstermektedir. Geliştirilen esnek regex kuralları sayesinde, veriler harf arasına sıkışmış olsa dahi (IP adresi ve temiz URL) cımbızla çekilerek başarıyla tespit edilmiştir.
